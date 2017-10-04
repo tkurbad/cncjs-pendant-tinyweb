@@ -5,16 +5,16 @@ var cnc = root.cnc || {};
 var controller = cnc.controller;
 
 controller.on('serialport:list', function(list) {
-    var $el = $('[data-route="connection"] select[data-name="port"]');
+//    var $el = $('[data-route="connection"] select[data-name="port"]');
 
-    $el.empty();
-    $.each(list, function(key, value) {
-        var $option = $('<option></option>')
-            .attr('value', value.port)
-            .attr('data-inuse', value.inuse)
-            .text(value.port);
-        $el.append($option);
-    });
+//    $el.empty();
+//    $.each(list, function(key, value) {
+//        var $option = $('<option></option>')
+//            .attr('value', value.port)
+//            .attr('data-inuse', value.inuse)
+//            .text(value.port);
+//        $el.append($option);
+//    });
 
     if (cnc.controllerType) {
         $('[data-route="connection"] select[data-name="controllerType"]').val(cnc.controllerType);
