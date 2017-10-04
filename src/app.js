@@ -342,7 +342,7 @@ controller.on('TinyG:state', function(data) {
     $('[data-route="axes"] [data-name="wpos-z"]').text(wpos.z);
 });
 
-controller.listAllPorts();
+//controller.listAllPorts();
 
 // Workspace 
 $('[data-route="workspace"] [data-name="port"]').val('');
@@ -353,17 +353,19 @@ $('[data-route="workspace"] [data-name="btn-close"]').on('click', function() {
 //
 // Connection
 //
-$('[data-route="connection"] [data-name="btn-open"]').on('click', function() {
-    var controllerType = $('[data-route="connection"] [data-name="controllerType"]').val();
-    var port = $('[data-route="connection"] [data-name="port"]').val();
-    var baudrate = $('[data-route="connection"] [data-name="baudrate"]').val();
+//$('[data-route="connection"] [data-name="btn-open"]').on('click', function() {
+//    var controllerType = $('[data-route="connection"] [data-name="controllerType"]').val();
+//    var port = $('[data-route="connection"] [data-name="port"]').val();
+//    var baudrate = $('[data-route="connection"] [data-name="baudrate"]').val();
+//
+//    $('[data-route="connection"] [data-name="msg"]').val('');
+//    controller.openPort(port, {
+//        controllerType: controllerType,
+//        baudrate: Number(baudrate)
+//    });
+//});
 
-    $('[data-route="connection"] [data-name="msg"]').val('');
-    controller.openPort(port, {
-        controllerType: controllerType,
-        baudrate: Number(baudrate)
-    });
-});
+controller.openPort('/dev/ttyS0', {controllerType: 'Grbl', baudrate: 115200});
 
 //
 // Axes
