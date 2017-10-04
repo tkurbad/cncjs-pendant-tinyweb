@@ -212,8 +212,8 @@ function renderGrblState(data) {
         factor = grblReportingUnits === 0 ? 1/25.4 : 1.0 ;
         break;
     case 'G21':
-        mlabel = 'MPos (mm):';
-        wlabel = 'WPos (mm):';
+        mlabel = 'MPos:';
+        wlabel = 'WPos:';
         digits = 3;
         factor = grblReportingUnits === 0 ? 1.0 : 25.4;
         break;

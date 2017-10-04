@@ -44,14 +44,16 @@
     <div class="form-group">
         <label>Controller Type</label>
         <select class="form-control" data-name="controllerType">
-            <option value="Grbl">Grbl</option>
+            <option value="Grbl" selected>Grbl</option>
             <option value="Smoothie">Smoothie</option>
             <option value="TinyG">TinyG</option>
         </select>
     </div>
     <div class="form-group">
         <label>Port</label>
-        <select class="form-control" data-name="port"></select>
+        <select class="form-control" data-name="port">
+            <option value="/dev/ttyS0" selected>/dev/ttyS0</option>
+        </select>
     </div>
     <div class="form-group">
         <label>Baud rate</label>
@@ -83,7 +85,7 @@
                                 </button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a role="menuitem" href="javascript:void(0)" onclick="cnc.controller.command('homing')"><i class="fa fa-home"></i>&nbsp;Homing</a>
+                                        <a role="menuitem" href="javascript:void(0)" onclick="cnc.controller.command('homing'); cnc.controller.command('reset')"><i class="fa fa-home"></i>&nbsp;Homing</a>
                                     </li>
                                     <li>
                                         <a role="menuitem" href="javascript:void(0)" onclick="cnc.controller.command('gcode', '$SLP')"><i class="fa fa-bed"></i>&nbsp;Sleep</a>
